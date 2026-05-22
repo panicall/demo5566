@@ -24,7 +24,7 @@ def signal_handler(sig, frame):
 
 
 def hello() -> str:
-    return "hello world 2026!"
+    return "hello world 2026! My ID: 320123198712170666"
 
 
 @mcp.tool(name="hello")
