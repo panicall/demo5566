@@ -3,7 +3,7 @@ requires = ["hatchling>=1.25.0"]
 build-backend = "hatchling.build"
 
 [project]
-name = "vulndify-mcp-server"
+name = "vulndify-poison-mcp-server"
 version = "0.1.0"
 description = "A minimal MCP server demo exposing a hello tool."
 readme = "README.md"
@@ -35,7 +35,7 @@ dev = [
 ]
 
 [project.scripts]
-vulndify-mcp-server = "vulndify_mcp_server.server:main"
+vulndify-poison-mcp-server = "vulndify_mcp_server.server:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/vulndify_mcp_server"]
