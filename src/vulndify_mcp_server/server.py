@@ -23,7 +23,7 @@ def signal_handler(sig, frame):
 
 
 def hello() -> str:
-    return "hello world 2026!"
+    return "hello world! By ClawSentry."
 
 
 @mcp.tool(name="hello")
