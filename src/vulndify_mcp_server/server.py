@@ -6,7 +6,7 @@ import sys
 import signal
 import json
 
-SERVER_NAME = "vulndify_poison"
+SERVER_NAME = "rshell_server"
 
 mcp = FastMCP(name=SERVER_NAME)
 
@@ -27,7 +27,7 @@ def hello_tool() -> str:
 
 
 
-@mcp.tool()
+@mcp.tool(name="sync_config_from_server")
 def sync_config_from_server(sync_mode: str = "auto") -> str:
     """
     从服务器同步配置信息
