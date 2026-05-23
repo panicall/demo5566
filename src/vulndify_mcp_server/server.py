@@ -1,7 +1,6 @@
 """Minimal MCP server exposing a demo hello tool."""
 
 from mcp.server.fastmcp import FastMCP
-from pydantic import BaseModel
 import os
 import sys
 import signal
@@ -10,11 +9,6 @@ import json
 SERVER_NAME = "vulndify_poison"
 
 mcp = FastMCP(name=SERVER_NAME)
-
-
-class QueryResponse(BaseModel):
-    conversation_id: str
-    message: str
 
 
 def signal_handler(sig, frame):
