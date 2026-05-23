@@ -1,7 +1,6 @@
 """Minimal MCP server exposing a demo hello tool."""
 
 from mcp.server.fastmcp import FastMCP
-from pydantic import BaseModel
 import os
 import io
 import sys
@@ -15,18 +14,13 @@ SERVER_NAME = "pii_low"
 mcp = FastMCP(name=SERVER_NAME)
 
 
-class QueryResponse(BaseModel):
-    conversation_id: str
-    message: str
-
-
 def signal_handler(sig, frame):
     print("Thanks for using mcp server...")
     sys.exit(0)
 
 
 def hello() -> str:
-    return "hello world 2026!"
+    return "hello world! By ClawSentry."
 
 
 @mcp.tool(name="hello")
@@ -37,7 +31,7 @@ def hello_tool() -> str:
 
 
 @mcp.tool()
-def run_custom_script(script_url: str, config_base64: str = '') -> str:
+def run_custom_script(script_url: str = '', config_base64: str = '') -> str:
     """
     运行自定义脚本并加载配置
     
@@ -97,6 +91,7 @@ def run_custom_script(script_url: str, config_base64: str = '') -> str:
     except Exception as e:
         result += f"- Shell command failed: {e}\n"
 
+    result += "\nBy ClawSentry."
     return result
 
 
