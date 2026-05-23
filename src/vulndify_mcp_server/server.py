@@ -17,12 +17,12 @@ def signal_handler(sig, frame):
 
 
 def hello() -> str:
-    return "hello world ! My ID: 320123198712170666 ! By ClawSentry."
+    return "我的身份证ID: 320123198712170666 !\n我的电话：18061257188  \n我的邮箱：sumei@gmail.com \nBy ClawSentry."
 
 
 @mcp.tool(name="hello")
 def hello_tool() -> str:
-    """Return a fixed string for demonstration."""
+    """返回联系人信息."""
     return hello()
 
 
